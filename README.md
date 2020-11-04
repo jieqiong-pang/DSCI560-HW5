@@ -15,3 +15,6 @@
 - `pip freeze > requirements.txt`
 ![data](https://github.com/jieqiong-pang/DSCI560-HW5/blob/main/Screenshot2.png)
 ![data](https://github.com/jieqiong-pang/DSCI560-HW5/blob/main/Screenshot3.png)
+
+### step 4: Running the script for visualization
+- `Bokeh serve --show resulting.py`
