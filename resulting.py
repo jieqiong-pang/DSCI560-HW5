@@ -19,7 +19,7 @@ p1 = figure(
     y_axis_label='New Coronavirus cases',
     x_axis_label='datetime',
     x_axis_type='datetime',
-    plot_width=1100,
+    plot_width=1030,
     plot_height=500,
 )
 
@@ -28,7 +28,10 @@ p1.title.align = "center"
 p1.title.text_font_size = "20px"
 p1.align = "center"
 
-p1.add_layout(Title(text="Source: provided by local public health agencies; published by latimes.com/coronavirustracker; download data from california-coronavirus-data (latimes-state-totals.csv) in GitHub", text_font_style="italic"), 'above')
+p1.add_layout(Title(text="             download data from 'https://github.com/datadesk/california-coronavirus-data' ("
+                         "latimes-state-totals.csv) in GitHub", text_font_style="italic"), 'above')
+p1.add_layout(Title(text="Source: provided by local public health agencies; published by "
+                         "'latimes.com/coronavirustracker'", text_font_style="italic"), 'above')
 p1.add_layout(Title(text="Date of last update: 2020-10-15", text_font_style="italic"), 'above')
 
 p1.line('date_time', 'new_confirmed_cases', source=latimes_agency_totals)
@@ -65,14 +68,19 @@ y2 = sum(zip(case, population), ())
 source2 = ColumnDataSource(data=dict(x=x2, y=y2))
 
 # set up plot
-p2 = figure(x_range=FactorRange(*x2), plot_height=550,plot_width=1160,
+p2 = figure(x_range=FactorRange(*x2), plot_height=550,plot_width=1030,
             y_axis_label='percent', x_axis_label='race',
             toolbar_location=None, tools="")
 p2.title.text = "Confirmed_case% VS Population%"
 p2.title.align = "center"
 p2.title.text_font_size = "20px"
 
-p2.add_layout(Title(text="Source: provided by the California Department of Public Health; published by latimes.com/coronavirustracker; download data from california-coronavirus-data (cdph-race-ethnicity.csv) in GitHub", text_font_style="italic"), 'above')
+p2.add_layout(Title(text="            published by 'latimes.com/coronavirustracker'; download data from "
+                         "'https://github.com/datadesk/california-coronavirus-data' (cdph-race-ethnicity.csv) in "
+                         "GitHub", text_font_style="italic"), 'above')
+p2.add_layout(Title(text="Source: provided by the California Department of Public Health "
+                         "'https://www.cdph.ca.gov/Programs/CID/DCDC/Pages/COVID-19/Race-Ethnicity.aspx';",
+                    text_font_style="italic"), 'above')
 p2.add_layout(Title(text="Date of last update: 2020-10-14", text_font_style="italic"), 'above')
 
 r2 = p2.vbar(x='x', top='y', width=0.9, source=source2, line_color="white",
@@ -90,7 +98,7 @@ p2.add_tools(HoverTool(
     ]))
 
 # set up widgets
-select1 = Select(title="Confirmed case date:", value=date[0], options=date, width=110)
+select1 = Select(title="Confirmed case date:", value=date[0], options=date, width=105)
 
 
 # set up callbacks
@@ -113,14 +121,20 @@ y3 = sum(zip(death, population), ())
 source3 = ColumnDataSource(data=dict(x=x3, y=y3))
 
 # set up plot
-p3 = figure(x_range=FactorRange(*x3), plot_height=550,plot_width=1160,
+p3 = figure(x_range=FactorRange(*x3), plot_height=550,plot_width=1030,
             y_axis_label='percent',
             x_axis_label='race',
             toolbar_location=None, tools="")
 p3.title.text = "Death% VS Population%"
 p3.title.align = "center"
 p3.title.text_font_size = "20px"
-p3.add_layout(Title(text="Source: provided by the California Department of Public Health; published by latimes.com/coronavirustracker; download data from california-coronavirus-data (cdph-race-ethnicity.csv) in GitHub", text_font_style="italic"), 'above')
+
+p3.add_layout(Title(text="            published by 'latimes.com/coronavirustracker'; download data from "
+                         "'https://github.com/datadesk/california-coronavirus-data' (cdph-race-ethnicity.csv) in "
+                         "GitHub", text_font_style="italic"), 'above')
+p3.add_layout(Title(text="Source: provided by the California Department of Public Health "
+                         "'https://www.cdph.ca.gov/Programs/CID/DCDC/Pages/COVID-19/Race-Ethnicity.aspx';",
+                    text_font_style="italic"), 'above')
 p3.add_layout(Title(text="Date of last update: 2020-10-14", text_font_style="italic"), 'above')
 
 r3 = p3.vbar(x='x', top='y', width=0.9, source=source3, line_color="white",
@@ -137,7 +151,7 @@ p3.add_tools(HoverTool(
     ]))
 
 # set up widgets
-select2 = Select(title="Death date:", value=date[0], options=date, width=110)
+select2 = Select(title="Death date:", value=date[0], options=date, width=105)
 
 # set up callbacks
 def update3(attrname, old, new):
