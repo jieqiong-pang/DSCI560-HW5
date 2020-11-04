@@ -6,3 +6,6 @@
 - `pip install virtualenv`
 - `virtualenv dsci560H5`
 - `source dsci560H5/bin/activate`
+
+![data](https://github.com/jieqiong-pang/DSCI560-HW5/blob/main/Screenshot1.png)
+
