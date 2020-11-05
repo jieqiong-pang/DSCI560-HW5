@@ -34,3 +34,6 @@
 
 - open browser and go to the link below to access to the dashboard result being served:
 `http://localhost:5006/resulting`
+
+![data](https://github.com/jieqiong-pang/DSCI560-HW5/blob/main/Screenshot6.png)
+
