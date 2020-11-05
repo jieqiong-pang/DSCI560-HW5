@@ -24,7 +24,7 @@
 ### step 5: Build container
 - install [Docker Desktop](https://www.docker.com/products/docker-desktop) in computer
 - clone hw5 file from GitHub: `git clone https://github.com/jieqiong-pang/DSCI560-HW5.git`
-- build image named ad 'image560': `docker build --tag image560 .`
+- build image named as 'image560': `docker build --tag image560 .`
 
 ![data](https://github.com/jieqiong-pang/DSCI560-HW5/blob/main/Screenshot4.png)
 
