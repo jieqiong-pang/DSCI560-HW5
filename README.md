@@ -13,7 +13,9 @@
 - `pip install pandas`
 - `pip install bokeh`
 - `pip freeze > requirements.txt`
+
 ![data](https://github.com/jieqiong-pang/DSCI560-HW5/blob/main/Screenshot2.png)
+
 ![data](https://github.com/jieqiong-pang/DSCI560-HW5/blob/main/Screenshot3.png)
 
 ### step 4: Running the script for visualization
@@ -23,4 +25,9 @@
 - install [Docker Desktop](https://www.docker.com/products/docker-desktop) in computer
 - clone hw5 file from GitHub: `git clone https://github.com/jieqiong-pang/DSCI560-HW5.git`
 - build image named ad 'image560': `docker build --tag image560 .`
+
 ![data](https://github.com/jieqiong-pang/DSCI560-HW5/blob/main/Screenshot4.png)
+
+- execute 'image560': `docker run -p 5006:5006 -it image560`
+
+![data](https://github.com/jieqiong-pang/DSCI560-HW5/blob/main/Screenshot5.png)
