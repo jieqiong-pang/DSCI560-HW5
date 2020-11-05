@@ -18,3 +18,6 @@
 
 ### step 4: Running the script for visualization
 - `Bokeh serve --show resulting.py`
+
+### step 5: Build container
+#### install [Docker Desktop](https://www.docker.com/products/docker-desktop) in computer
