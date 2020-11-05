@@ -31,3 +31,6 @@
 - execute 'image560': `docker run -p 5006:5006 -it image560`
 
 ![data](https://github.com/jieqiong-pang/DSCI560-HW5/blob/main/Screenshot5.png)
+
+- open browser and go to the link below to access to the dashboard result being served:
+`http://localhost:5006/resulting`
