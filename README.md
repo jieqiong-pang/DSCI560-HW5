@@ -19,6 +19,7 @@
 ![data](https://github.com/jieqiong-pang/DSCI560-HW5/blob/main/Screenshot3.png)
 
 ### step 4: Running the script for visualization
+- before run .py script, please install package `pip install -r requirements.txt`
 - `Bokeh serve --show resulting.py`
 
 ### step 5: Build container
